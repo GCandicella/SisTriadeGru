@@ -14,10 +14,17 @@
     color: #ad0000;
 }
 .editar{
+    cursor: pointer;
     background-color: #3b5998;
     color: #fff;
 }
 .delete{
+    cursor: pointer;
     background-color: #ad0000;
+    color: #fff;
+}
+.recibo{
+    cursor: pointer;
+    background-color: #69a854;
     color: #fff;
 }

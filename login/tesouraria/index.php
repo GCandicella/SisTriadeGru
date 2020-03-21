@@ -37,21 +37,20 @@ $user = 'Guilherme';
         <div class="col-md-12">
             <div class="table-responsive">
                 <table class="table">
-                    <thead>
                     <tr>
                         <th scope="row">Total: </th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                        <td class="text-center">- R$ 205,00</td>
+                        <td class="text-right">- R$ 205,00</td>
                     </tr>
+                </table>
+                <table class="table">
+                    <thead>
+
                     <tr>
                         <th scope="col">Data</th>
                         <th scope="col">Título</th>
                         <th scope="col">Descrição</th>
                         <th scope="col">Valor</th>
-                        <th class="text-center" scope="col" colspan="2">Editar</th>
+                        <th class="text-center" scope="col" colspan="3">Editar</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -60,6 +59,7 @@ $user = 'Guilherme';
                         <td>Conamesco</td>
                         <td>Ajuda de custo</td>
                         <td>- R$120,00</td>
+                        <td class="text-center recibo"><i class="far fa-file-alt"></i></td>
                         <td class="text-center editar"><i class="fas fa-pencil-alt"></i></td>
                         <td class="text-center delete"><i class="far fa-trash-alt"></i></td>
                     </tr>
@@ -68,6 +68,7 @@ $user = 'Guilherme';
                         <td>Sítio</td>
                         <td>Ajuda de custos</td>
                         <td>- R$100,00</td>
+                        <td class="text-center recibo"><i class="far fa-file-alt"></i></td>
                         <td class="text-center editar"><i class="fas fa-pencil-alt"></i></td>
                         <td class="text-center delete"><i class="far fa-trash-alt"></i></td>
                     </tr>
@@ -76,6 +77,7 @@ $user = 'Guilherme';
                         <td>Guilherme</td>
                         <td>Mensalidade Janeiro</td>
                         <td>+ R$15,00</td>
+                        <td class="text-center recibo"><i class="far fa-file-alt"></i></td>
                         <td class="text-center editar"><i class="fas fa-pencil-alt"></i></td>
                         <td class="text-center delete"><i class="far fa-trash-alt"></i></td>
                     </tr>
