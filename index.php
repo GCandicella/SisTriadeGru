@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
     <link rel="icon" type="image/png" href="assets/logos/logo.png">
 </head>
 <!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
@@ -18,14 +19,17 @@
                 <div class="card card-signin my-5">
                     <div class="card-body">
                         <h5 class="card-title text-center"><img width="80%" src="assets/logos/logo.png"></h5>
-                        <form class="form-signin">
+                        <div id="msg-erro" style="display: none" class="alert alert-warning fade show" role="alert">
+                            <strong>Email ou senha incorretos!</strong>
+                        </div>
+                        <form class="form-signin" method="post">
                             <div class="form-label-group">
-                                <input type="email" id="inputEmail" class="form-control" placeholder="Email / Login" required autofocus>
+                                <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email / Login" required autofocus>
                                 <label for="inputEmail">Email / Login</label>
                             </div>
 
                             <div class="form-label-group">
-                                <input style="z-index: 1;" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                                <input style="z-index: 1;" type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Password" required>
                                 <span class="versenha" onclick="showPass()"><i id="eyePass" class="fa fa-fw fa-eye"></i></span>
                                 <label for="inputPassword">Password</label>
                             </div>
@@ -47,3 +51,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
 </body>
 </html>
+<?php
+
+$user = $_POST['inputEmail'];
+$senha = $_POST['inputPassword'];
+
+if(isset($user) && isset($senha)){
+    if($user != 'guilherme@yourmove.com.br'){
+        echo '<script>mostrarErro()</script>';
+    }
+    else{
+        session_start();
+        $_SESSION['login'] = $user;
+        $_SESSION['senha'] = $senha;
+        header('location: ./login/');
+    }
+}
+?>
