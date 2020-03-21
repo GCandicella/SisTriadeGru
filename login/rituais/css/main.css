@@ -1,0 +1,30 @@
+.cabecalho{
+    padding: 4em;
+    padding-bottom: 0;
+}
+.cabecalho a, .cabecalho a i{
+    color: #222;
+    font-weight: 800;
+}
+.cabecalho a:hover{
+    color: #ad0000;
+    text-decoration: none;
+}
+.cabecalho a i:hover{
+    color: #ad0000;
+}
+.editar{
+    cursor: pointer;
+    background-color: #3b5998;
+    color: #fff;
+}
+.delete{
+    cursor: pointer;
+    background-color: #ad0000;
+    color: #fff;
+}
+.recibo{
+    cursor: pointer;
+    background-color: #69a854;
+    color: #fff;
+}

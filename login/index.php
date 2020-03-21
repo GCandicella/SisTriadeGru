@@ -7,7 +7,7 @@ if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == tru
     header('location:../index.html');
 }
 
-$user = 'Guilherme';
+$user = 'Nome do DeMolay';
 ?>
 <!DOCTYPE html>
 <html lang="en">

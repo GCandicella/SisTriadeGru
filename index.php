@@ -57,7 +57,7 @@ $user = $_POST['inputEmail'];
 $senha = $_POST['inputPassword'];
 
 if(isset($user) && isset($senha)){
-    if($user != 'guilherme@yourmove.com.br'){
+    if($user != 'demolay@triade.com'){
         echo '<script>mostrarErro()</script>';
     }
     else{
